@@ -4,7 +4,7 @@ import { Card } from "./Card";
 import { Icon } from "@chakra-ui/react";
 import { IconType } from "react-icons/lib";
 
-interface HomeSummaryProps {
+interface SummaryProps {
   title: string;
   body?: string;
   value?: number;
@@ -12,12 +12,13 @@ interface HomeSummaryProps {
   iconColor?: string;
 }
 
-export const HomeSummary: React.FC<HomeSummaryProps> = ({
+export const Summary: React.FC<SummaryProps> = ({
   title,
   body,
   value,
   icon,
   iconColor,
+  children,
 }) => {
   return (
     <Card>
@@ -39,6 +40,7 @@ export const HomeSummary: React.FC<HomeSummaryProps> = ({
           </>
         )}
       </Flex>
+      <Stack>{children}</Stack>
     </Card>
   );
 };

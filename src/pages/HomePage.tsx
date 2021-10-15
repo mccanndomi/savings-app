@@ -1,7 +1,8 @@
 import { Stack, Box, Text, Flex } from "@chakra-ui/layout";
-import { HomeSummary } from "../components/HomeSummary";
+import { Summary } from "../components/Summary";
+import { SpendingSummary } from "../components/SpendingSummary";
 import React from "react";
-import { Avatar, Icon } from "@chakra-ui/react";
+import { Icon } from "@chakra-ui/react";
 import {
   BsGearWideConnected,
   BsChevronUp,
@@ -9,6 +10,9 @@ import {
   BsFillCaretUpFill,
   BsFillCaretDownFill,
 } from "react-icons/bs";
+import { SavingSummary } from "../components/SavingSummary";
+import { InvestingSummary } from "../components/InvestingSummary";
+import { WelcomHeader } from "../components/WelcomeHeader";
 
 function HomePage() {
   return (
@@ -26,34 +30,10 @@ function HomePage() {
         <Flex justifyContent="flex-end">
           <Icon as={BsGearWideConnected} color="white" w={8} h={8} />
         </Flex>
-        <Flex flexDirection="row" paddingBottom="10" paddingTop="10">
-          <Avatar
-            size="lg"
-            name="Dom McCann"
-            src="https://scontent.fakl2-1.fna.fbcdn.net/v/t1.6435-9/31841666_1843726695677971_50277217879457792_n.jpg?_nc_cat=107&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=Tdv6fNfg1e4AX85jzQj&_nc_ht=scontent.fakl2-1.fna&oh=af446b87d273712c9425ed7bee29f7da&oe=618F7089"
-          />
-          <Box marginLeft="6">
-            <Text color="white">Welcome back,</Text>
-            <Text fontWeight="bold" fontSize="3xl" color="white" lineHeight="8">
-              Dom McCann
-            </Text>
-          </Box>
-        </Flex>
-        <HomeSummary title="Savings" value={10271.31} />
-        <HomeSummary
-          title="Spending"
-          body="Weekly spending"
-          value={142.24}
-          icon={BsChevronUp}
-          iconColor={"green"}
-        />
-        <HomeSummary
-          title="Investment"
-          body="Total investment gain"
-          value={67.61}
-          icon={BsChevronDown}
-          iconColor={"red"}
-        />
+        <WelcomHeader />
+        <SavingSummary />
+        <SpendingSummary />
+        <InvestingSummary />
       </Stack>
     </Stack>
   );
