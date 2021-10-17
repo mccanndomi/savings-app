@@ -13,6 +13,8 @@ import {
 import { SavingSummary } from "../components/SavingSummary";
 import { InvestingSummary } from "../components/InvestingSummary";
 import { WelcomHeader } from "../components/WelcomeHeader";
+import headerLight from "../res/light.svg";
+import headerDark from "../res/dark.svg";
 
 function HomePage() {
   return (
@@ -20,11 +22,13 @@ function HomePage() {
       <Box
         pos="fixed"
         zIndex={-1}
-        backgroundColor="blue"
         w="100vw"
         h="40vh"
         borderBottomRadius="50"
-        backgroundImage="https://i.pinimg.com/736x/3d/3f/85/3d3f85b9670837febfe616e71462534c.jpg"
+        backgroundColor="#273e73"
+        // backgroundImage="https://i.pinimg.com/736x/3d/3f/85/3d3f85b9670837febfe616e71462534c.jpg"
+        // backgroundImage={headerLight}
+        backgroundSize="cover"
       />
       <Stack padding="8" spacing="6">
         <Flex justifyContent="flex-end">
