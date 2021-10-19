@@ -1,7 +1,6 @@
-import { Box, Center, Flex, Stack, Text } from "@chakra-ui/layout";
+import { HStack } from "@chakra-ui/layout";
 import React from "react";
 import { Summary } from "./Summary";
-import { Icon } from "@chakra-ui/react";
 import {
   BsGearWideConnected,
   BsChevronUp,
@@ -9,7 +8,13 @@ import {
   BsFillCaretUpFill,
   BsFillCaretDownFill,
 } from "react-icons/bs";
-import { IoFastFoodSharp } from "react-icons/io5";
+import {
+  IoFastFoodOutline,
+  IoBeerOutline,
+  IoCartOutline,
+  IoBusOutline,
+} from "react-icons/io5";
+import { CircularProgressIcon } from "./CircularProgressIcon";
 
 interface SpendingSummaryProps {}
 
@@ -21,8 +26,14 @@ export const SpendingSummary: React.FC<SpendingSummaryProps> = ({}) => {
       value={142.24}
       icon={BsChevronUp}
       iconColor={"green"}
+      to="/spending"
     >
-      <Icon as={IoFastFoodSharp} />
+      <HStack justifyContent="space-evenly" w="100%" paddingTop="1">
+        <CircularProgressIcon value={40} icon={IoFastFoodOutline} />
+        <CircularProgressIcon value={26} icon={IoBeerOutline} />
+        <CircularProgressIcon value={82} icon={IoCartOutline} />
+        <CircularProgressIcon value={11} icon={IoBusOutline} />
+      </HStack>
     </Summary>
   );
 };

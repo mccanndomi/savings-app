@@ -6,7 +6,7 @@ interface WelcomHeaderProps {}
 
 export const WelcomHeader: React.FC<WelcomHeaderProps> = ({}) => {
   return (
-    <Flex flexDirection="row" paddingBottom="10" paddingTop="10">
+    <Flex flexDirection="row" paddingBottom="8" paddingTop="2">
       <Avatar
         size="lg"
         name="Dom McCann"

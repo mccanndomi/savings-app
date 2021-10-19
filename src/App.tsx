@@ -16,7 +16,7 @@ function App() {
         <Route path="/spending" component={SpendingPage} />
         <Route path="/investing" component={InvestmentsPage} />
       </Switch>
-      <MenuBar />
+      {/* <MenuBar /> */}
     </Router>
   );
 }

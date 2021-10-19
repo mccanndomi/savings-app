@@ -8,6 +8,7 @@ import {
   BsFillCaretUpFill,
   BsFillCaretDownFill,
 } from "react-icons/bs";
+import { StockPreview } from "./StockPreview";
 
 interface InvestingSummaryProps {}
 
@@ -19,6 +20,9 @@ export const InvestingSummary: React.FC<InvestingSummaryProps> = ({}) => {
       value={67.61}
       icon={BsChevronDown}
       iconColor={"red"}
-    />
+      to="/investing"
+    >
+      <StockPreview />
+    </Summary>
   );
 };

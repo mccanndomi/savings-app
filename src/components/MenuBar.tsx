@@ -13,13 +13,13 @@ interface MenuBarProps {}
 
 export const MenuBar: React.FC<MenuBarProps> = () => {
   return (
-    <HStack justifyContent="space-evenly" h="8vh">
+    <HStack justifyContent="space-evenly" h="8vh" shadow="2xl">
       <Link to="/">
         <Icon
           as={BsHouseDoor}
           w={8}
           h={8}
-          color={true ? "#c4825c" : "lightgrey"}
+          color={true ? "#B09479" : "lightgrey"}
         />
       </Link>
       <Link to="/savings">
